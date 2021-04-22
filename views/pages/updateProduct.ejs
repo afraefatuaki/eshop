@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1><a href="/">My Gallery</a></h1>
+        <h1><a href="/addNew">Add</a></h1>
+    </div>
+    <h1>Update Product</h1>
+    <form action="/update" method="post">
+        <input type="hidden" name="id" value=<%=result._id %>>
+        <label for="">Link</label>
+        <input type="text" name="Link" id="" placeholder="Product Link" value=<%=result.ProductLink %>>
+        <label for="">price</label>
+        <input type="number" name="Price" id="" placeholder="price" value=<%=result.Price %>>
+        <label for="">Company</label>
+        <input type="text" name="Company" placeholder="company´s name" value=<%=result.Company %>>
+        <label for="">url</label>
+        <input type="text" name="url" placeholder="link" value=<%=result.LinkShop %>>
+        <label for="">Product name</label>
+        <input type="text" name="name" placeholder="product´s name" value=<%=result.ProductName %>>
+        <input type="submit" value="update" onclick="goBack()">
+    </form>
+    <script>
+        function goBack() {
+            window.location = "/"
+        }
+    </script>
+</body>
+
+</html>
